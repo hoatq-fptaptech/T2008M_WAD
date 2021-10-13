@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "List Category";
+}
+@model List<T2008M_WAD.Models.Category>
+
+<ul>
+    @foreach(var item in Model)
+            {
+                <li>@item.Name</li>
+            }
+</ul>

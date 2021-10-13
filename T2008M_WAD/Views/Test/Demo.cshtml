@@ -1,8 +1,13 @@
-﻿
+﻿@model int
 @{
     ViewBag.Title = "Demo";
+    var year = 2021;
 }
 
 <h2>Demo</h2>
 
 Demo new Controller and View
+<h3>X = @ViewData["xgame"] </h3>
+<h3>X Bag = @ViewBag.XGame</h3>
+<h3>Year: @year</h3>
+<h3>Day: @Model</h3>
