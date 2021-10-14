@@ -9,8 +9,7 @@ namespace T2008M_WAD.Models
     {
         public DataContext(): base("T2008M") { 
         }
-
         public DbSet<Category> Categories { get; set; }
-
+        public DbSet<Product> Products { get; set; }
     }
 }

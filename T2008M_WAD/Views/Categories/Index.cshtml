@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Categories";
+}
+@model List<T2008M_WAD.Models.Category>
+    <p><a href="~/Categories/Create">Create a category</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>
+                        <a href="~/Categories/Details/@item.Id">Detail</a>
+                        <a href="~/Categories/Edit/@item.Id">Edit</a>
+                        <a onclick="return confirm('Are you sure?')" href="~/Categories/Delete/@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>
