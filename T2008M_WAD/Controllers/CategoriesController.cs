@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using T2008M_WAD.Models;
+using System.IO;
 namespace T2008M_WAD.Controllers
 {
     public class CategoriesController : Controller
@@ -16,6 +17,7 @@ namespace T2008M_WAD.Controllers
             return View(context.Categories.ToList());
         }
 
+        [Authorize] // phai dang nhap vao thi moi xem dc
         public ActionResult Details(int? id)
         {
             if(id == null)
@@ -37,10 +39,30 @@ namespace T2008M_WAD.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include ="Id,Name")]Category category)
+        public ActionResult Create([Bind(Include ="Id,Name")]Category category,HttpPostedFileBase Image)
         {
             if (ModelState.IsValid)
             {
+                // upload image
+                string catImg = "~/Uploads/default.png"; //edit -  category.Image
+                try
+                {
+                    if (Image != null)
+                    {
+                        string fileName = Path.GetFileName(Image.FileName);// lay url path khi upload len
+                        string path = Path.Combine(Server.MapPath("~/Uploads"), fileName);
+                        Image.SaveAs(path);
+                        catImg = "~/Uploads/" + fileName;
+                    }
+
+                }
+                catch (Exception e) {
+                }
+                finally
+                {
+                    category.Image = catImg;// set giá trị sau khi upload ảnh lên vào category
+                }
+                
                 context.Categories.Add(category);// them 1 object vao list
                 context.SaveChanges();// luu vao db
                 return RedirectToAction("Index");
