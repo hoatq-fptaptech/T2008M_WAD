@@ -41,7 +41,14 @@
         <dd>
             @Html.DisplayFor(model => model.Price)
         </dd>
-
+        <dt>Add To Cart</dt>
+        <dd>
+            @using (Html.BeginForm("AddToCart","Products", new { Id = Model.Id }, FormMethod.Get))
+            {
+                <input name="qty" type="number" value="1"/>
+                <button type="submit" class="btn btn-danger">Add to cart</button>
+            }
+            </dd>
     </dl>
 </div>
 <p>

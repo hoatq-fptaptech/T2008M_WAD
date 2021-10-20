@@ -56,6 +56,9 @@ namespace T2008M_WAD
                          "~/Content/adminLTE/dist/js/demo.js",
                          "~/Content/adminLTE/dist/js/pages/dashboard.js"
                 ));
+
+            // theme frontend
+
         }
     }
 }
