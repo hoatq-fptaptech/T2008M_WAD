@@ -72,7 +72,6 @@ C:\Aptech\SEM3\T2008M_WAD\T2008M_WAD\T2008M_WAD\bin\System.Web.WebPages.Razor.xm
 C:\Aptech\SEM3\T2008M_WAD\T2008M_WAD\T2008M_WAD\bin\Newtonsoft.Json.xml
 C:\Aptech\SEM3\T2008M_WAD\T2008M_WAD\T2008M_WAD\bin\Antlr3.Runtime.pdb
 C:\Aptech\SEM3\T2008M_WAD\T2008M_WAD\T2008M_WAD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Aptech\SEM3\T2008M_WAD\T2008M_WAD\T2008M_WAD\obj\Debug\T2008M_WAD.csprojAssemblyReference.cache
 C:\Aptech\SEM3\T2008M_WAD\T2008M_WAD\T2008M_WAD\obj\Debug\T2008M_WAD.csproj.CoreCompileInputs.cache
 C:\Aptech\SEM3\T2008M_WAD\T2008M_WAD\T2008M_WAD\obj\Debug\T2008M_WAD.csproj.CopyComplete
 C:\Aptech\SEM3\T2008M_WAD\T2008M_WAD\T2008M_WAD\obj\Debug\T2008M_WAD.dll

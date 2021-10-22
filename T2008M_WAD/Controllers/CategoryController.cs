@@ -7,7 +7,7 @@ using T2008M_WAD.Models;
 using System.IO;
 namespace T2008M_WAD.Controllers
 {
-    public class CategoriesController : Controller
+    public class CategoryController : Controller
     {
         private DataContext context = new DataContext();
 
